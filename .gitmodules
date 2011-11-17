@@ -79,3 +79,6 @@
 [submodule "bundle/snippetsEmu"]
 	path = bundle/snippetsEmu
 	url = https://github.com/vim-scripts/snippetsEmu.git
+[submodule "bundle/mru"]
+	path = bundle/mru
+	url = https://github.com/vim-scripts/mru.vim.git
