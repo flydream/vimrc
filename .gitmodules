@@ -55,9 +55,27 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule "l9_vim_mirror"]
-	path = l9_vim_mirror
-	url = https://github.com/kairichard/l9_vim_mirror.git
 [submodule "bundle/l9_vim_mirror"]
 	path = bundle/l9_vim_mirror
 	url = https://github.com/kairichard/l9_vim_mirror.git
+[submodule "bundle/fuzzyfinder"]
+	path = bundle/fuzzyfinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url =https://github.com/tpope/vim-rails.git
+[submodule "bundle/VimIM"]
+	path = bundle/VimIM
+	url = https://github.com/vim-scripts/VimIM.git
+[submodule "bundle/blackboard"]
+	path = bundle/blackboard
+	url = https://github.com/vim-scripts/blackboard.vim.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/vim-scripts/fugitive.vim.git
+[submodule "bundle/snippetsEmu"]
+	path = bundle/snippetsEmu
+	url = https://github.com/vim-scripts/snippetsEmu.git
