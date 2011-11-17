@@ -55,3 +55,9 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "l9_vim_mirror"]
+	path = l9_vim_mirror
+	url = https://github.com/kairichard/l9_vim_mirror.git
+[submodule "bundle/l9_vim_mirror"]
+	path = bundle/l9_vim_mirror
+	url = https://github.com/kairichard/l9_vim_mirror.git

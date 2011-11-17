@@ -16,6 +16,7 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
+set number              " auto show the number line
 
 
 filetype on           " Enable filetype detection
@@ -31,11 +32,14 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-  set guifont=Osaka-Mono:h20
+" set guifont=Osaka-Mono:h20
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
+  set guifontwide=Microsoft\ Yahei\ 12,WenQuanYi\ Zen\ Hei\ 12
   set background=dark 
   set t_Co=256          " 256 color mode
   set cursorline        " highlight current line
-  colors moria
+  " colors moria
+  colorscheme blackboard
 else
 " terminal color settings
   colors vgod
@@ -66,10 +70,15 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4 
+   set shiftwidth=4 
 
    au FileType Makefile set noexpandtab
+
+   " add by flydream
+   set tabstop=4  
+   set cindent shiftwidth=4  
+   set autoindent shiftwidth=4 
 "}      							
 
 " status line {
@@ -310,4 +319,7 @@ nnoremap <silent> <F7> :TagbarToggle<CR>
 " set focus to TagBar when opening it
 let g:tagbar_autofocus = 1
 
-
+" mapping F8 to lauch NERDTree plugin  
+map <F8> :NERDTreeToggle<CR>  
+" mapping ctrl+s to save file  
+imap <C-S> <C-C>:w<CR>  
