@@ -33,13 +33,15 @@ set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
 " set guifont=Osaka-Mono:h20
-  set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
-  set guifontwide=Microsoft\ Yahei\ 12,WenQuanYi\ Zen\ Hei\ 12
-  set background=dark 
-  set t_Co=256          " 256 color mode
+  set guifont=Menlo:h16     " MacOS
+" set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
+" set guifontwide=Microsoft\ Yahei\ 12,WenQuanYi\ Zen\ Hei\ 12
+" set guifontwide=Microsoft\ Yahei\ 12,WenQuanYi\ Zen\ Hei\ 12
+"  set background=dark 
+"  set t_Co=256          " 256 color mode
   set cursorline        " highlight current line
   " colors moria
-  colorscheme blackboard
+  colorscheme Tomorrow-Night
 else
 " terminal color settings
   colors vgod
@@ -57,6 +59,7 @@ set wildignore=*.o,*.class,*.pyc
 set autoindent		" auto indentation
 set incsearch		" incremental search
 set nobackup		" no *~ backup files
+set noswapfile      " no swap files
 set copyindent		" copy the previous indentation on autoindenting
 set ignorecase		" ignore case when searching
 set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
@@ -246,18 +249,20 @@ autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 set encoding=utf-8                                  
 set termencoding=utf-8
 set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2321,cp936,big5,latin1
 
 fun! ViewUTF8()
 	set encoding=utf-8                                  
-	set termencoding=big5
+	" set termencoding=big5
+	set termencoding=gbk
 endfun
 
 fun! UTF8()
 	set encoding=utf-8                                  
-	set termencoding=big5
+	" set termencoding=big5
+	set termencoding=gbk
 	set fileencoding=utf-8
-	set fileencodings=ucs-bom,big5,utf-8,latin1
+	set fileencodings=ucs-bom,gbk,utf-8,big5,latin1
 endfun
 
 fun! Big5()
@@ -309,6 +314,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " --- EasyMotion
 "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
+let g:EasyMotion_leader_key = ','
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
@@ -320,6 +326,20 @@ nnoremap <silent> <F7> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " mapping F8 to lauch NERDTree plugin  
+let NERDTreeShowBookmarks = 1
+let NERDChristmasTree = 1
+let NERDTreeWinPos = "left"
 map <F8> :NERDTreeToggle<CR>  
+
 " mapping ctrl+s to save file  
 imap <C-S> <C-C>:w<CR>  
+
+" 设置FuzzyFinder
+let mapleader = "\\"
+map <leader>F :FufFile<CR>
+map <leader>f :FufTaggedFile<CR>
+map <leader>g :FufTag<CR>
+map <leader>b :FufBuffer<CR>
+
+" 设置帮助文档为中文
+set helplang=cn 
